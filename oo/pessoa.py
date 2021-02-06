@@ -21,4 +21,8 @@ if __name__ == '__main__':
     print(victor.pais)
     for pai in victor.pais:
         print(pai)
+    victor.sobrenome = 'Morais'
+    del victor.sobrenome
+    print(aldo.__dict__)
+    print(victor.__dict__)
 
