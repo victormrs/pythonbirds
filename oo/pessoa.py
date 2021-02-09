@@ -18,7 +18,7 @@ class Pessoa:
         return f'{cls}, -olhos {cls.olhos}'
 
 if __name__ == '__main__':
-    aldo = Pessoa(nome='Aldo', idade=48)
+    aldo = Pessoa(nome='Aldo', idade=47)
     karla = Pessoa(nome='Karla', idade=45)
     victor = Pessoa(aldo, karla, nome='Victor', idade=21)
     print(Pessoa.cumprimentar(victor))
