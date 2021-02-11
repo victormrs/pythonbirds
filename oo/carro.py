@@ -1,8 +1,13 @@
-
-
-
 class Motor:
-
+    """
+    doctest para motor
+    >>>motor1.acelerar()
+    >>>motor1.velocidade
+    1
+    >>>motor1.frear()
+    >>>motor1.velocidade
+    0
+    """
     def __init__(self, velocidade=0):
         self.velocidade = velocidade
 
@@ -75,13 +80,15 @@ class Carro:
 
 carro = Carro()
 
-print(carro.calcular_velocidade())
-print(carro.mostrar_direcao())
-carro.acelerar()
-carro.acelerar()
-print(carro.calcular_velocidade())
-carro.frear()
-print(carro.calcular_velocidade())
-carro.girar_a_esquerda()
-carro.girar_a_esquerda()
-print(carro.mostrar_direcao())
+if __name__ == '__main__':
+
+    print(carro.calcular_velocidade())
+    print(carro.mostrar_direcao())
+    carro.acelerar()
+    carro.acelerar()
+    print(carro.calcular_velocidade())
+    carro.frear()
+    print(carro.calcular_velocidade())
+    carro.girar_a_esquerda()
+    carro.girar_a_esquerda()
+    print(carro.mostrar_direcao())
