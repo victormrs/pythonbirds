@@ -42,7 +42,7 @@ class Fase():
 
         :param obstaculos:
         """
-        pass
+        self._obstaculos.extend(obstaculos)
 
     def adicionar_porco(self, *porcos):
         """
@@ -50,7 +50,7 @@ class Fase():
 
         :param porcos:
         """
-        pass
+        self._porcos.extend(porcos)
 
     def adicionar_passaro(self, *passaros):
         """
@@ -58,7 +58,7 @@ class Fase():
 
         :param passaros:
         """
-        pass
+        self._passaros.extend(passaros)
 
     def status(self):
         """
@@ -73,11 +73,11 @@ class Fase():
         :return:
         """
         if not self._existem_porcos_ativos():
-            return DERROTA
+            return VITORIA
         elif self._existem_passaros_ativos():
             return EM_ANDAMENTO
         else:
-            return VITORIA
+            return DERROTA
 
     def lancar(self, angulo, tempo):
         """
