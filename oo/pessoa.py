@@ -17,10 +17,21 @@ class Pessoa:
     def nome_e_atributos_de_classe(cls):
         return f'{cls}, -olhos {cls.olhos}'
 
+
+class Homem(Pessoa):
+    def cumprimentar(self):
+        cumprimento_de_classe = super().cumprimentar()
+        return f'{cumprimento_de_classe}. Aperto de mão.'
+
+
+class Mutante(Pessoa):
+    olhos = 3
+
+
 if __name__ == '__main__':
-    aldo = Pessoa(nome='Aldo', idade=47)
+    aldo = Homem(nome='Aldo', idade=47)
     karla = Pessoa(nome='Karla', idade=45)
-    victor = Pessoa(aldo, karla, nome='Victor', idade=21)
+    victor = Homem(aldo, karla, nome='Victor', idade=21)
     print(Pessoa.cumprimentar(victor))
     print(id(victor))
     print(victor.nome)
@@ -40,3 +51,4 @@ if __name__ == '__main__':
     print(id(Pessoa.olhos), id(aldo.olhos), id(victor.olhos))
     print(Pessoa.metodo_estatico(), victor.metodo_estatico())
     print(Pessoa.nome_e_atributos_de_classe(), victor.nome_e_atributos_de_classe())
+    print(victor.cumprimentar())

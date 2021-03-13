@@ -1,11 +1,14 @@
 class Motor:
     """
     doctest para motor
-    >>>motor1.acelerar()
-    >>>motor1.velocidade
+
+    >>> # testando motor
+    >>> motor=Motor()
+    >>> motor.acelerar()
+    >>> motor.velocidade
     1
-    >>>motor1.frear()
-    >>>motor1.velocidade
+    >>> motor.frear()
+    >>> motor.velocidade
     0
     """
     def __init__(self, velocidade=0):
