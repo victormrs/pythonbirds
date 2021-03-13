@@ -36,7 +36,6 @@ class Fase():
         self._porcos = []
         self._obstaculos = []
 
-
     def adicionar_obstaculo(self, *obstaculos):
         """
         Adiciona obstáculos em uma fase
@@ -79,7 +78,6 @@ class Fase():
             return EM_ANDAMENTO
         else:
             return VITORIA
-
 
     def lancar(self, angulo, tempo):
         """
